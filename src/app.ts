@@ -3,13 +3,17 @@ import express, { Express } from "express";
 import cors from "cors";
 import dotenv from "dotenv";
 import { connectDb, disconnectDB } from "./config";
+
+import { usersRouter } from "@/routes";
+
 dotenv.config();
 
 const app = express();
 
 app
   .use(cors())
-  .use(express.json());
+  .use(express.json())
+  .use('/users', usersRouter);
 
 export function init(): Promise<Express> {
   connectDb();
