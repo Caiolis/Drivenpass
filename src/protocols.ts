@@ -1,4 +1,4 @@
-import { Credential } from "@prisma/client";
+import { Credential, Network } from "@prisma/client";
 
 export type ApplicationError = {
     name: string;
@@ -13,4 +13,9 @@ export type RequestError = {
     message: string;
 };
 
+export type DeleteProcess = {
+    id: number;
+  };
+
 export type CreateCredential = Omit<Credential, 'id'>;
+export type NetworkParams = Omit<Network, 'id'>;

@@ -1,9 +1,8 @@
 import { Router } from 'express';
 import { credentialController } from '@/controllers';
-import { validateSchema } from '@/middlewares';
+import { validateSchema, authenticateToken } from '@/middlewares';
 
 import { credentialSchema } from '@/schemas';
-import { authenticateToken } from '@/middlewares';
 
 const credentialRouter = Router();
 
