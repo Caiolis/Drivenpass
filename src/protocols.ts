@@ -19,3 +19,5 @@ export type DeleteProcess = {
 
 export type CreateCredential = Omit<Credential, 'id'>;
 export type NetworkParams = Omit<Network, 'id'>;
+export type CredentialParams = Omit<Credential, 'id'>;
+export type CredentialBodyParams = Omit<Credential, 'id' | 'userId'>;
